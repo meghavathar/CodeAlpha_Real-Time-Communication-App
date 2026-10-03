@@ -91,7 +91,7 @@ npm install
 Create a `.env` file in the project folder.
 
 ```env
-MONGODB_URI=mongodb+srv://rtc_megha:Megha2006@cluster0.plqzsyl.mongodb.net/real_time_communication
+MONGODB_URI=mongodb+srv://rtc_Name:Password@cluster0.plqzsyl.mongodb.net/real_time_communication
 PORT=5001
 ```
 

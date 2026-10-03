@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Meeting - ConnectHub</title>
+
+    <link rel="stylesheet"
+        href="/meeting.css">
+
+</head>
+
+<body>
+
+    <header class="meeting-header">
+
+        <h2>
+            ConnectHub Meeting
+        </h2>
+
+        <div>
+
+            <span id="usernameDisplay"></span>
+
+            <button onclick="logout()">
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <div class="meeting-container">
+
+
+        <!-- VIDEO SECTION -->
+
+        <section class="video-section">
+
+            <div id="videoGrid">
+
+                <video
+                    id="localVideo"
+                    autoplay
+                    muted
+                    playsinline>
+                </video>
+
+            </div>
+
+
+            <div class="controls">
+
+                <button id="micButton">
+                    🎤 Microphone
+                </button>
+
+                <button id="cameraButton">
+                    📷 Camera
+                </button>
+
+                <button id="screenButton">
+                    🖥 Share Screen
+                </button>
+
+                <button id="leaveButton">
+                    🚪 Leave
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAT -->
+
+        <section class="chat-section">
+
+            <h3>
+                Meeting Chat
+            </h3>
+
+            <div id="messages"></div>
+
+
+            <form id="chatForm">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Type a message..."
+                    required
+                >
+
+                <button>
+                    Send
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- WHITEBOARD -->
+
+        <section class="whiteboard-section">
+
+            <div class="whiteboard-header">
+
+                <h3>
+                    Collaborative Whiteboard
+                </h3>
+
+                <button id="clearBoard">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <canvas
+                id="whiteboard">
+            </canvas>
+
+        </section>
+
+
+        <!-- FILE SHARING -->
+
+        <section class="file-section">
+
+            <h3>
+                File Sharing
+            </h3>
+
+
+            <form id="fileForm">
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    required
+                >
+
+                <button type="submit">
+                    Upload
+                </button>
+
+            </form>
+
+
+            <div id="fileResult"></div>
+
+        </section>
+
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script src="/auth.js"></script>
+
+    <script src="/meeting.js"></script>
+
+</body>
+
+</html>
